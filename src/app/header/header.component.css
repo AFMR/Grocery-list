@@ -19,13 +19,13 @@ li{
     float: none;
     display: inline-block;
 }
-li a {
+.header-button a {
     display: block;
     color: white;
     text-align: center;
     padding: .5em .5em;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: .7em;
     font-family: 'Patrick Hand', cursive, Arial, Helvetica, sans-serif;
 }
 
