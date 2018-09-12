@@ -1,0 +1,20 @@
+h2{
+    text-align: center;
+    padding-top: 2em;
+}
+.list{
+    text-align: center;
+    padding-top: 1em;
+    background: white;
+    margin: 1rem auto;
+    display: block;
+    width: 19em;
+    padding: 1rem;
+    border-radius: 15px;
+    border: 13px double purple;
+    box-shadow: 2px 4px  rgb(159, 67, 187);
+}
+.button{
+    background: linear-gradient(140deg,#6441a5, purple);
+    color: white;
+}

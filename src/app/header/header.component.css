@@ -1,8 +1,7 @@
 #title{
     text-align:center;
     color: white;
-    text-shadow: 2px 2px 4px #c078d6;
-    background-color: purple;
+    text-shadow: 2px 2px 4px #b031d6;
     padding: .5em;
     font-size: 2em;
     font-family: 'Patrick Hand', cursive, Arial, Helvetica, sans-serif;
@@ -13,7 +12,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #BA55D3;
+    background-color: rgb(212, 173, 230);
     text-align: center;
 }
 li{
