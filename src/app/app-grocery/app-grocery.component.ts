@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-grocery.component.css']
 })
 export class AppGroceryComponent implements OnInit {
+  list: Array<string> = [
+    "algo",
+    "Take a nap",
+    "Do something"
+  ]
 
   constructor() { }
 

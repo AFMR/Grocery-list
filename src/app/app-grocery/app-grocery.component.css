@@ -8,13 +8,20 @@ h2{
     background: white;
     margin: 1rem auto;
     display: block;
-    width: 19em;
-    padding: 1rem;
+    width: 20em;
     border-radius: 15px;
     border: 13px double purple;
     box-shadow: 2px 4px  rgb(159, 67, 187);
 }
 .button{
-    background: linear-gradient(140deg,#6441a5, purple);
+    background: linear-gradient(70deg, rgb(159, 67, 187) 0%, rgb(241, 205, 248));
     color: white;
+}
+#delete{
+    background: rgb(159, 67, 187);
+}
+li{
+    list-style: none;
+    font-size: 2em;
+    text-align: left;
 }
