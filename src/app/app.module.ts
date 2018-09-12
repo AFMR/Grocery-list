@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { AppGroceryComponent } from './app-grocery/app-grocery.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { OnlineComponent } from './online/online.component';
+import { OthersComponent } from './others/others.component';
 
 
 
@@ -15,7 +17,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     AppComponent,
     AppGroceryComponent,
     HeaderComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    OnlineComponent,
+    OthersComponent
   ],
   imports: [
     BrowserModule,

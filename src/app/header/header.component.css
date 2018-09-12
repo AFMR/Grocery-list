@@ -5,5 +5,31 @@
     background-color: purple;
     padding: .5em;
     font-size: 2em;
-    font-family: 'Patrick Hand', cursive, Arial, Helvetica, sans-serif; 
+    font-family: 'Patrick Hand', cursive, Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #BA55D3;
+    text-align: center;
+}
+li{
+    float: none;
+    display: inline-block;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: .5em .5em;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: 'Patrick Hand', cursive, Arial, Helvetica, sans-serif;
+}
+
+li a:hover {
+    background-color: purple;
 }
