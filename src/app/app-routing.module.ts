@@ -10,8 +10,16 @@ const routes: Routes = [
     component: LandingPageComponent ,
   },
   {
-    path:'shoppingList/:listName',
-    component: AppGroceryComponent,
+    path:'shoppingList1/:listName',
+    component: AppGroceryComponent
+  },
+  {
+    path:'shoppingList2/:listName',
+    component: AppGroceryComponent
+  },
+  {
+    path:'shoppingList3/:listName',
+    component: AppGroceryComponent
   }
 ];
 

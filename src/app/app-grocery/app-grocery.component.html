@@ -4,14 +4,20 @@
 <div>
   <h2> {{this.listData.listName}} </h2>
   <div class="list">
-              <input #newItemText (keyup.enter)="addItem(newItemText.value)" (blur)="addItem(newItemText.value); newItemText.value='' ">
-              <button class="button" (click)="addItem(newItemText.value)">Add item</button>
-              <button class="button" id="delete" (click)="clearList()">Delete ALL</button>
-              <div class="buy-items">
-                <ul class="list-items checked-list" *ngFor="let item of listData.items">
-                  <li class="item"><input id="checkbox" checked type="checkbox"><span>{{item.itemName}}</span></li>
-                </ul>
-              </div>
+    <input #newItemText (keyup.enter)="addItem(newItemText.value); newItemText.value=''">
+    <button class="button" (click)="addItem(newItemText.value); newItemText.value=''">Add item</button>
+    <button class="button" id="delete" (click)="clearList()">Delete ALL</button>
+    <div class="buy-items">
+      <ul class="list-items checked-list" *ngFor="let item of itemsArray">
+        <li class="item">
+          <!--<input id="checkbox" checked type="checkbox">-->
+          <input id="{{item.itemName}}" [checked]="item.checked" class="checkbox" type="checkbox" (change)="checkBoxValueChanged($event)"/>
+            <span>
+              {{item.itemName}}
+            </span>
+        </li>
+      </ul>
+    </div>
   </div>
 
 </div>

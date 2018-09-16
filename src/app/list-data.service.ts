@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { ListData } from './ListData';
-import { ShoppingItem } from './ShoppingItem';
 
 @Injectable({
   providedIn: 'root'
@@ -8,24 +7,36 @@ import { ShoppingItem } from './ShoppingItem';
 
 export class ListDataService {
 
-  listsData: { [listName : string] : ListData} = { }
+  //listsData: { [listName : string] : ListData} = { }
+  //list: { [checkBoxText : string] : boolean} = { }
+  //online: { [checkBoxText : string] : boolean} = { }
+  //other: { [checkBoxText : string] : boolean} = { }
 
+  listsData: Map<string, ListData> = new Map()
+  list: Map<string, boolean> = new Map()
+  online: Map<string, boolean> = new Map()
+  other: Map<string, boolean> = new Map()
+ 
   constructor() { 
-    //this.listsData["list"] = new ListData('Grocery list', [new ShoppingItem('Onions', false), new ShoppingItem('Tomatoes', false), new ShoppingItem('Carrots', false)])
-    //this.listsData["online"] = new ListData('Online shopping', [new ShoppingItem('Batteries', false), new ShoppingItem('Power', false), new ShoppingItem('Socks', false)])
-    //this.listsData["other"] = new ListData('Other list', [new ShoppingItem('Gifts', false), new ShoppingItem('Sweater', true), new ShoppingItem('Art supplies', false)])
-    
-    this.listsData["list"] = new ListData('Grocery list', new Array<ShoppingItem>())
-    this.listsData["online"] = new ListData('Online shopping', new Array<ShoppingItem>())
-    this.listsData["other"] = new ListData('Other list', new Array<ShoppingItem>())
+    this.listsData["list"] = new ListData('Grocery list', this.list)
+    this.listsData["online"] = new ListData('Online shopping', this.online)
+    this.listsData["other"] = new ListData('Other list', this.other)
     }
 
     getlistData(listName : string) : ListData {
       return this.listsData[listName]
     }
     
-    addItem(listName: string, newItem: string){
-      this.listsData[listName].items.push(new ShoppingItem(newItem, false))
+    addItem(listName: string, itemText: string){
+      this.listsData[listName].items.set(itemText, false)
+    }
+    
+    clearList(listName: string){
+      this.listsData[listName].items = { }
+    }
+
+    changeItemStatus(listName: string, itemText: string, itemStatus: boolean){
+      this.listsData[listName].items[itemText] = itemStatus
     }
   }
 

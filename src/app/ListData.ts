@@ -1,7 +1,6 @@
-import { ShoppingItem } from "./ShoppingItem";
-
 export class ListData{
-    constructor(public listName: string, public items: Array<ShoppingItem>)
+    //constructor(public listName: string, public items: { [checkBoxText : string] : boolean})
+    constructor(public listName: string, public items: Map<string, boolean>)
     {
     }
 }
