@@ -18,11 +18,19 @@ export class AppGroceryComponent implements OnInit {
   constructor(private route: ActivatedRoute, private service: ListDataService) { }
 
   addItem(newItem: string){
+    if (newItem === ""){
+      alert("Please enter a text")
+    }
+    else{
     this.service.addItem(this.listName, newItem)
+   }
   }
 
   clearList(){
-    this.service.clearList(this.listName)
+    var confirmation = confirm("Are you sure you want to delete the list?");
+    if(confirmation == true ){
+      this.service.clearList(this.listName)
+   }
   }
 
   checkBoxValueChanged(e){
@@ -35,8 +43,8 @@ export class AppGroceryComponent implements OnInit {
 
     this.listData = this.service.getlistData(this.listName)
 
-    for (let [k, v] of this.listData.items) {
-      this.itemsArray.push(new ShoppingItem(k, v))
+    for (let [key, value] of this.listData.items) {
+      this.itemsArray.push(new ShoppingItem(key, value))
     }
   }
 }

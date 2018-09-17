@@ -7,11 +7,6 @@ import { ListData } from './ListData';
 
 export class ListDataService {
 
-  //listsData: { [listName : string] : ListData} = { }
-  //list: { [checkBoxText : string] : boolean} = { }
-  //online: { [checkBoxText : string] : boolean} = { }
-  //other: { [checkBoxText : string] : boolean} = { }
-
   listsData: Map<string, ListData> = new Map()
   list: Map<string, boolean> = new Map()
   online: Map<string, boolean> = new Map()
@@ -32,7 +27,7 @@ export class ListDataService {
     }
     
     clearList(listName: string){
-      this.listsData[listName].items = { }
+      this.listsData[listName].items = new Map()
     }
 
     changeItemStatus(listName: string, itemText: string, itemStatus: boolean){
