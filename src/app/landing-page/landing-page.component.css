@@ -2,8 +2,7 @@
     text-align:center;
     color: white;
     text-shadow: 2px 2px 4px #b031d6;
-    padding: .5em;
-    font-size: 2em;
+    font-size: 3em;
     font-family: 'Patrick Hand', cursive, Arial, Helvetica, sans-serif; 
 }
 
@@ -12,24 +11,35 @@
     color: purple;
     font-size: 3em;
     font-family: 'Patrick Hand', cursive, Arial, Helvetica, sans-serif;
-    padding-top: .7em;
+    font-weight: bold;
     
 }
 .button-main{
     display: flex;
+    color: white;
     flex-flow: column;
     margin:  1.5em;
     font-size: 2.5em;
-    width: 40%;
-    border-radius: 8px;
+    width: 60%;
+    border-radius: 9px;
     cursor: pointer;
-    border: solid 1px puple;
+    background-color: rgb(212, 173, 230);
+    box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24),0 17px 50px 0 #b031d6;
+    transition: font-size 0.3s ease;
     
 }
-.button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    cursor: pointer;
+.button-main:hover {
+    background-color: purple;
+    font-size: 3.5em;
+    
 }
+
 #buttons-container{
     text-align: center;
+}
+
+@media screen and (max-width: 360px){
+   
+
+
 }
