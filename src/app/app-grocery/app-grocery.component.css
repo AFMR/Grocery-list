@@ -1,0 +1,11 @@
+ul li {
+    cursor: pointer;
+    transition: 0.2s;
+    background:rgb(212, 173, 230);
+}
+
+ul li:hover{
+    background-color:purple;
+ }
+
+

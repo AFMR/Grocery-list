@@ -31,7 +31,7 @@ export class ListDataService {
     }
 
     changeItemStatus(listName: string, itemText: string, itemStatus: boolean){
-      this.listsData[listName].items[itemText] = itemStatus
+      this.listsData[listName].items.set(itemText, itemStatus)
     }
   }
 

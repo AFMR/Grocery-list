@@ -38,13 +38,18 @@ export class AppGroceryComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.refresh()
+  }
+
+  refresh(){
     this.route.params.subscribe(
-    params => this.listName = params.listName.toString())
-
-    this.listData = this.service.getlistData(this.listName)
-
-    for (let [key, value] of this.listData.items) {
-      this.itemsArray.push(new ShoppingItem(key, value))
-    }
+      params => this.listName = params.listName.toString())
+  
+      this.listData = this.service.getlistData(this.listName)
+  
+      this.itemsArray = new Array<ShoppingItem>()
+      for (let [key, value] of this.listData.items) {
+        this.itemsArray.push(new ShoppingItem(key, value))
+      }
   }
 }

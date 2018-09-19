@@ -4,9 +4,11 @@
 <div>
   <h2> {{this.listData.listName}} </h2>
   <div class="list">
+    <div id="input-container">
     <input #newItemText (keyup.enter)="addItem(newItemText.value); newItemText.value=''">
-    <button class="button" (click)="addItem(newItemText.value); newItemText.value=''">Add item</button>
-    <button class="button" id="delete" (click)="clearList()">Delete ALL</button>
+    <button class="button" (click)="addItem(newItemText.value); newItemText.value=''; refresh()"><i class="fa fa-check"></i></button>
+    <button class="button" (click)="clearList(); refresh()"><i class="fa fa-trash"> ALL</i></button>
+    </div>
     <div class="buy-items">
       <ul class="list-items checked-list" *ngFor="let item of itemsArray">
         <li class="item">

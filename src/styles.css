@@ -3,17 +3,24 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     font-family: 'Patrick Hand', cursive;
-    font-family: 'Reenie Beanie', cursive; 
+    
     background: linear-gradient(360deg, rgb(159, 67, 187) 0%, rgb(241, 205, 248) 100%);
 }
 
 h2{
     text-align: center;
-    padding-top: 2em;
+    font-size: 3em;
+    color:rgb(159, 67, 187);
+    font-family:'Reenie Beanie', cursive;
+}
+#input-container{
+    width: 100%;
+    display: inline-block;
+    padding-bottom: .3em;
 }
 .list{
     text-align: center;
-    padding-top: 1em;
+    padding-top: .5em;
     background: white;
     margin: 1rem auto;
     display: block;
@@ -22,16 +29,43 @@ h2{
     border: 13px double purple;
     box-shadow: 2px 4px  rgb(159, 67, 187);
 }
+input{
+    font-size: 1.2em;
+    width: 45%;
+    font-family: 'Patrick Hand', cursive;
+}
 .button{
-    background: linear-gradient(70deg, rgb(159, 67, 187) 0%, rgb(241, 205, 248));
+    background: rgb(212, 173, 230);
     color: white;
+    margin: .3em;
+    font-size: 1.2em;
 }
-#delete{
-    background: rgb(159, 67, 187);
+.button:hover {
+    background-color: purple;
 }
+
 li{
     list-style: none;
     font-size: 2em;
+    text-align: center;
+}
+
+.item{
     text-align: left;
+}
+ul{
+    padding: 0;
+}
+
+.buy-items{
+    padding: 0;
+}
+
+@media screen and (max-width: 360px){
+    .list{
+        width: 17em;
+        
+    }
+
 }
 
