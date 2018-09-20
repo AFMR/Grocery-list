@@ -1,11 +1,10 @@
 #title{
     text-align:center;
     color: white;
-    text-shadow: 2px 2px 4px #b031d6;
+    text-shadow: 4px 4px 6px #b031d6;
     font-size: 3em;
     font-family: 'Patrick Hand', cursive, Arial, Helvetica, sans-serif; 
 }
-
 
 #categories{
     color: purple;
@@ -18,14 +17,14 @@
     display: flex;
     color: white;
     flex-flow: column;
-    margin:  1.5em;
+    margin:  1.5em auto;
     font-size: 2.5em;
     width: 60%;
     border-radius: 9px;
     cursor: pointer;
     background-color: rgb(212, 173, 230);
     box-shadow: 0 14px 18px 0 rgba(0,0,0,0.24),0 17px 50px 0 #b031d6;
-    transition: font-size 0.3s ease;
+    transition: font-size 0.2s ease;
     
 }
 .button-main:hover {
@@ -38,8 +37,23 @@
     text-align: center;
 }
 
-@media screen and (max-width: 360px){
-   
-
+@media screen and (min-width: 700px){
+    #title{
+        font-size: 6em;  
+        text-shadow: 6px 6px 8px #b031d6;
+    }
+    
+    #categories{
+        font-size: 4em;
+    }
+    .button-main{
+        font-size: 3.5em;
+        width: 40%;
+    }
+    .button-main:hover {
+        background-color: purple;
+        font-size: 5em;
+        
+    }
 
 }

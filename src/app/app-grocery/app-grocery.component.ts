@@ -33,6 +33,10 @@ export class AppGroceryComponent implements OnInit {
    }
   }
 
+  clearItem(deleteItem : string){
+    this.service.clearItem(this.listName, deleteItem)
+  }
+
   checkBoxValueChanged(e){
     this.service.changeItemStatus(this.listName, e.target.id.toString(), e.target.checked)
   }

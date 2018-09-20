@@ -25,9 +25,13 @@ export class ListDataService {
     addItem(listName: string, itemText: string){
       this.listsData[listName].items.set(itemText, false)
     }
-    
+    //Erase the full list
     clearList(listName: string){
       this.listsData[listName].items = new Map()
+    }
+    //Erase one selected item
+    clearItem(listName: string, itemText: string){
+      this.listsData[listName].items.delete(itemText)
     }
 
     changeItemStatus(listName: string, itemText: string, itemStatus: boolean){

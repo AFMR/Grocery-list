@@ -5,7 +5,5 @@ ul li {
 }
 
 ul li:hover{
-    background-color:purple;
+    background-color:rgb(221, 103, 221);
  }
-
-

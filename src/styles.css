@@ -6,12 +6,23 @@ body {
     
     background: linear-gradient(360deg, rgb(159, 67, 187) 0%, rgb(241, 205, 248) 100%);
 }
-
+input[type='checkbox'] {
+    width:.7em;
+    height:.7em;
+    background-color:white;
+    cursor: pointer;
+}
+input:checked + label  {
+    text-decoration: line-through;
+    color: gray;
+  }
+ 
 h2{
     text-align: center;
     font-size: 3em;
     color:rgb(159, 67, 187);
     font-family:'Reenie Beanie', cursive;
+    margin: .5em;
 }
 #input-container{
     width: 100%;
@@ -24,7 +35,7 @@ h2{
     background: white;
     margin: 1rem auto;
     display: block;
-    width: 20em;
+    width: 18em;
     border-radius: 15px;
     border: 13px double purple;
     box-shadow: 2px 4px  rgb(159, 67, 187);
@@ -39,6 +50,13 @@ input{
     color: white;
     margin: .3em;
     font-size: 1.2em;
+}
+.item-delete{
+    background: rgb(212, 173, 230);
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
 }
 .button:hover {
     background-color: purple;
@@ -61,11 +79,56 @@ ul{
     padding: 0;
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 320px){
     .list{
-        width: 17em;
-        
+        width: 16em;
     }
-
 }
 
+@media only screen and (min-width: 700px){
+    #title{
+        font-size: 5em !important;  
+        text-shadow: 6px 6px 8px #b031d6 !important;
+    }
+    #header-menu{
+        font-size: 1.5em;
+    }
+    h2{
+        font-size: 4.5em;
+    }
+    .list{
+        width: 30em;
+    }
+    input, .button{
+        font-size: 2em;
+    }
+    li{
+        font-size: 2.5em;
+    }
+    input[type='checkbox'] {
+        width:.5em;
+        height:.5em;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .list{
+        width: 40em;
+    }
+    input{
+        font-size: 2.5em;
+    }
+    h2{
+        font-size: 6em;
+    }
+    .button{
+        font-size: 2.8em;
+    }
+    li{
+        font-size: 3.5em;
+    }
+    input[type='checkbox'] {
+        width:.3em;
+        height:.3em;
+    }
+}
