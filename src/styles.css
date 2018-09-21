@@ -50,6 +50,7 @@ input{
     color: white;
     margin: .3em;
     font-size: 1.2em;
+    cursor: pointer;
 }
 .item-delete{
     background: rgb(212, 173, 230);

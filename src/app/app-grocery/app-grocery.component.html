@@ -15,7 +15,7 @@
           <!--<input id="checkbox" checked type="checkbox">-->
           <input id="{{item.itemName}}" [checked]="item.checked" class="checkbox" type="checkbox" (change)="checkBoxValueChanged($event)"/>
             <label class="item-container">
-              {{item.itemName}}  <button class="item-delete" (click)="clearItem(); refresh()"><i class="fa fa-trash"></i></button>
+              {{item.itemName}}  <button class="item-delete" (click)="clearItem(item.itemName); refresh()"><i class="fa fa-trash item-delete"></i></button>
             </label>
         </li>
       </ul>
