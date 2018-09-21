@@ -5,8 +5,9 @@ ul li {
 }
 
 ul li:hover{
-    background-color:rgb(221, 103, 221);
+    background-color:rgb(221, 127, 221);
  }
+
 .item-delete{
     float: right;
     font-size: 1em;
