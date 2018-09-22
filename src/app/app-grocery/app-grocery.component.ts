@@ -14,15 +14,23 @@ export class AppGroceryComponent implements OnInit {
   listName: string
   listData: ListData
   itemsArray: Array<ShoppingItem> = new Array<ShoppingItem>()
+  itemBeingEdited: string
 
   constructor(private route: ActivatedRoute, private service: ListDataService) { }
 
-  addItem(newItem: string){
+  updateItem(newItem: string){
     if (newItem === ""){
       alert("Please enter a text")
     }
     else{
-    this.service.addItem(this.listName, newItem)
+      if (this.itemBeingEdited === '')
+      {
+        this.service.addItem(this.listName, newItem)
+      }
+      else
+      {
+        this.service.editItem(this.listName, this.itemBeingEdited, newItem)
+      }
    }
   }
 
@@ -40,9 +48,14 @@ export class AppGroceryComponent implements OnInit {
   checkBoxValueChanged(e){
     this.service.changeItemStatus(this.listName, e.target.id.toString(), e.target.checked)
   }
+  inputfocus(){
+    const newItemText: any = document.querySelector('input[name=textbox]');
+    newItemText.focus();
+  }
 
   ngOnInit() {
     this.refresh()
+    this.inputfocus()
   }
 
   refresh(){

@@ -8,8 +8,10 @@ ul li:hover{
     background-color:rgb(221, 127, 221);
  }
 
-.item-delete{
+.item-change{
     float: right;
     font-size: 1em;
     padding-top: 3px;
+    padding-left: 6px;
+    color: white;
 }

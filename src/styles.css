@@ -3,8 +3,9 @@ html, body { height: 100%; }
 body { 
     margin: 0; 
     font-family: 'Patrick Hand', cursive;
-    
     background: linear-gradient(360deg, rgb(159, 67, 187) 0%, rgb(241, 205, 248) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 input[type='checkbox'] {
     width:.7em;
@@ -90,48 +91,12 @@ ul{
 
 @media only screen and (min-width: 700px){
     #title{
-        font-size: 5em !important;  
+        font-size: 3em !important;  
         text-shadow: 6px 6px 8px #b031d6 !important;
     }
     #header-menu{
-        font-size: 1.5em;
+        font-size: 1em;
     }
-    h2{
-        font-size: 4.5em;
-    }
-    .list{
-        width: 30em;
-    }
-    input, .button{
-        font-size: 2em;
-    }
-    li{
-        font-size: 2.5em;
-    }
-    input[type='checkbox'] {
-        width:.5em;
-        height:.5em;
-    }
-}
-
-@media only screen and (min-width: 1000px){
-    .list{
-        width: 40em;
-    }
-    input{
-        font-size: 2.5em;
-    }
-    h2{
-        font-size: 6em;
-    }
-    .button{
-        font-size: 2.8em;
-    }
-    li{
-        font-size: 3.5em;
-    }
-    input[type='checkbox'] {
-        width:.3em;
-        height:.3em;
-    }
+    
+    
 }

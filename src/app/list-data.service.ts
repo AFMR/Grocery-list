@@ -34,6 +34,11 @@ export class ListDataService {
       this.listsData[listName].items.delete(itemText)
     }
 
+    editItem(listName: string, oldItemText:string, newItemText:string){
+      this.listsData[listName].items.delete(oldItemText)
+      this.listsData[listName].items.set(newItemText, false)
+    }
+
     changeItemStatus(listName: string, itemText: string, itemStatus: boolean){
       this.listsData[listName].items.set(itemText, itemStatus)
     }
