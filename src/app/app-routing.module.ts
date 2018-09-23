@@ -6,19 +6,19 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'Grocery-list/home',
     component: LandingPageComponent ,
   },
   {
-    path:'shoppingList1/:listName',
+    path:'Grocery-list/shoppingList1/:listName',
     component: AppGroceryComponent
   },
   {
-    path:'shoppingList2/:listName',
+    path:'Grocery-list/shoppingList2/:listName',
     component: AppGroceryComponent
   },
   {
-    path:'shoppingList3/:listName',
+    path:'Grocery-list/shoppingList3/:listName',
     component: AppGroceryComponent
   }
 ];
